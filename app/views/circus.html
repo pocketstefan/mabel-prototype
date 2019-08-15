@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="juggling-trick">Back</a>
+  <form class="form" action="/check-your-answers" method="post">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        What circus did get your training?
+      </h1>
+
+      <div class="govuk-form-group">
+    <label class="govuk-label" for="three-quarters">
+    Name of circus
+    </label>
+    <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="Name of circus" type="text" {{data["Name of circus"]}}>
+  </div>
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+<form class="form" action="/check-your-answers" method="post"></form>
+    </div>
+  </div>
+
+{% endblock %}
